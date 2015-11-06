@@ -1,7 +1,7 @@
 {
-  "name": "kinto-react-bootstrap",
+  "name": "formbuilder",
   "version": "0.0.1",
-  "description": "A Kinto+React project boilerplate.",
+  "description": "A form builder.",
   "main": "index.js",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server --config webpack.dev.js --port=3000",
@@ -11,19 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kinto/kinto-react-boilerplate.git"
+    "url": "git+https://github.com/almet/formbuilder.git"
   },
   "keywords": [
     "kinto",
     "react",
-    "boilerplate"
+    "formbuilder",
+    "forms"
   ],
-  "author": "Nicolas Perriault <nperriault@mozilla.com>",
+  "author": "Alexis Métaireau <alexis@notmyidea.org>",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/Kinto/kinto-react-boilerplate/issues"
+    "url": "https://github.com/almet/formbuilder"
   },
-  "homepage": "https://github.com/Kinto/kinto-react-boilerplate#readme",
+  "homepage": "https://github.com/almet/formbuilder",
   "dependencies": {
     "btoa": "^1.1.2",
     "kinto": "^1.0.0-rc.5",
