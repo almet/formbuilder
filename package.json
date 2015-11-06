@@ -26,11 +26,15 @@
   },
   "homepage": "https://github.com/almet/formbuilder",
   "dependencies": {
+    "bootstrap": "^3.3.5",
     "btoa": "^1.1.2",
+    "file-loader": "^0.8.4",
     "history": "^1.13.0",
     "kinto": "^1.0.0-rc.5",
-    "react": "^0.13.3",
-    "react-router": "^1.0.0-rc4"
+    "react": "^0.14.2",
+    "react-bootstrap": "^0.27.3",
+    "react-router": "^1.0.0-rc4",
+    "url-loader": "^0.5.6"
   },
   "devDependencies": {
     "babel": "^5.8.20",
