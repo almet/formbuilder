@@ -23,6 +23,8 @@ describe("App", () => {
 
     const auth = new Auth(events, {hash: ''});
     const store = new Store('', events);
+
+    // Stub all the methods of the store to return an empty promise.
     ["create", "delete", "load", "update", "sync"].forEach(method => {
       sinon.stub(store, method).returns(Promise.resolve({}))
     });
