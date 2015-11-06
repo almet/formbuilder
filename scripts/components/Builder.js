@@ -1,4 +1,5 @@
 import React, { PropTypes } from "react";
+import controller from "../controllerinstance";
 
 
 export class Form extends React.Component {
@@ -135,35 +136,36 @@ export default class Builder extends React.Component {
   constructor(props) {
     super(props);
     this.state = {busy: false, error: "", items: []};
+    this.controller = controller;
   }
 
   getChildContext() {
     // Pass the controller to child components.
     return {
-      controller: this.props.controller
+      controller: this.controller
     };
   }
 
   componentDidMount() {
-    this.props.controller.on("store:busy", state => {
+    this.controller.on("store:busy", state => {
       this.setState({busy: state, error: ""});
     });
-    this.props.controller.on("store:change", state => {
+    this.controller.on("store:change", state => {
       this.setState({items: state.items});
     });
-    this.props.controller.on("store:error", error => {
+    this.controller.on("store:error", error => {
       this.setState({error: error.message});
     });
-    this.props.controller.on("config:change", config => {
+    this.controller.on("config:change", config => {
       this.setState({server: config.server});
     });
 
     // Start the application!
-    this.props.controller.dispatch('action:start');
+    this.controller.dispatch('action:start');
   }
 
   onSyncClick() {
-    this.props.controller.dispatch('action:sync');
+    this.controller.dispatch('action:sync');
   }
 
   render() {
