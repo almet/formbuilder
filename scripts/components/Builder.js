@@ -127,7 +127,7 @@ export class Preferences extends React.Component {
 }
 
 
-export default class App extends React.Component {
+export default class Builder extends React.Component {
   static childContextTypes = {
     controller: PropTypes.object
   };
